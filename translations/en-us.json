@@ -62,5 +62,8 @@
   "post_sharing_description": "Show social media sharing on post",
   "community_topic_group_label": "Community topic elements",
   "follow_topic_label": "Follow",
-  "follow_topic_description": "Users can follow a specific topic"
+  "follow_topic_description": "Users can follow a specific topic",
+  "submit_request": "Submit a request",
+  "hero_title": "Yield App Help Center",
+  "hero_description": "Yield App’s Customer Support is online 24/7 to help with your needs."
 }

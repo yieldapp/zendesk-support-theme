@@ -640,29 +640,6 @@ ul {
   color: darken($link_color, 20%);
 }
 
-/***** Header *****/
-.header {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 5%;
-  position: relative;
-  align-items: center;
-  display: flex;
-  height: 71px;
-  justify-content: space-between;
-}
-
-@media (min-width: 1160px) {
-  .header {
-    padding: 0;
-    width: 90%;
-  }
-}
-
-.logo img {
-  max-height: 37px;
-}
-
 .user-nav {
   display: inline-block;
   position: absolute;
@@ -1002,25 +979,6 @@ ul {
 
 .search-container {
   position: relative;
-}
-
-/***** Hero component *****/
-.hero {
-  background-image: url($homepage_background_image);
-  background-position: center;
-  background-size: cover;
-  height: 300px;
-  padding: 0 20px;
-  text-align: center;
-  width: 100%;
-}
-
-.hero-inner {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  max-width: 610px;
-  margin: 0 auto;
 }
 
 .page-header {
@@ -4737,4 +4695,25 @@ html[dir="rtl"] .notification-left-aligned {
 
 .dropdown-chevron-icon {
   vertical-align: middle;
+}
+
+/*  */
+.brand-color {
+  background-color: $brand_color_v2;
+}
+
+.brand-color-inverted {
+  background-color: $background_color;
+}
+
+.brand-text-color {
+  color: $brand_text_color;
+}
+
+.brand-text-color-inverted {
+  color: $brand_color_v2;
+}
+
+.waves-bg {
+  background-image: url($waves);
 }

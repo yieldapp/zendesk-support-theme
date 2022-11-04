@@ -9,6 +9,13 @@
       "label": "colors_group_label",
       "variables": [
         {
+          "identifier": "brand_color_v2",
+          "type": "color",
+          "description": "brand_color_description",
+          "label": "brand_color_label",
+          "value": "#104499"
+        },
+        {
           "identifier": "brand_color",
           "type": "color",
           "description": "brand_color_description",
@@ -206,6 +213,18 @@
           "label": "logo_label"
         },
         {
+          "identifier": "logo_white",
+          "type": "file",
+          "description": "logo_description",
+          "label": "logo_label"
+        },
+        {
+          "identifier": "waves",
+          "type": "file",
+          "description": "waves_description",
+          "label": "waves_label"
+        },
+        {
           "identifier": "favicon",
           "type": "file",
           "description": "favicon_description",
@@ -233,6 +252,34 @@
           "type": "file",
           "description": "community_image_description",
           "label": "community_image_label"
+        }
+      ]
+    },
+    {
+      "label": "scripts_group_label",
+      "variables": [
+        {
+          "identifier": "header_script",
+          "type": "file",
+          "description": "header_script_description",
+          "label": "header_script_label"
+        }
+      ]
+    },
+    {
+      "label": "styles_group_label",
+      "variables": [
+        {
+          "identifier": "header_style",
+          "type": "file",
+          "description": "header_style_description",
+          "label": "header_style_label"
+        },
+        {
+          "identifier": "home_style",
+          "type": "file",
+          "description": "home_style_description",
+          "label": "home_style_label"
         }
       ]
     },

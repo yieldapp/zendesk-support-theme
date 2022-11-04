@@ -147,20 +147,20 @@ document.addEventListener('DOMContentLoaded', function() {
   var burgerMenu = document.querySelector('.header .menu-button');
   var userMenu = document.querySelector('#user-nav');
 
-  burgerMenu.addEventListener('click', function(e) {
+  burgerMenu?.addEventListener('click', function(e) {
     e.stopPropagation();
     toggleNavigation(this, userMenu);
   });
 
 
-  userMenu.addEventListener('keyup', function(e) {
+  userMenu?.addEventListener('keyup', function(e) {
     if (e.keyCode === ESCAPE) {
       e.stopPropagation();
       closeNavigation(burgerMenu, this);
     }
   });
 
-  if (userMenu.children.length === 0) {
+  if (userMenu?.children.length === 0) {
     burgerMenu.style.display = 'none';
   }
 
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Dropdowns
-  
+
   function Dropdown(toggle, menu) {
     this.toggle = toggle;
     this.menu = menu;
