@@ -229,18 +229,6 @@
           "type": "file",
           "description": "favicon_description",
           "label": "favicon_label"
-        },
-        {
-          "identifier": "faq_icon",
-          "type": "file",
-          "description": "faq_icon.svg_description",
-          "label": "faq_icon.svg_label"
-        },
-        {
-          "identifier": "support_icon",
-          "type": "file",
-          "description": "support_icon_description",
-          "label": "support_icon_label"
         }
       ]
     },
@@ -264,6 +252,36 @@
           "type": "file",
           "description": "community_image_description",
           "label": "community_image_label"
+        },
+        {
+          "identifier": "faq_icon",
+          "type": "file",
+          "description": "faq_icon_description",
+          "label": "faq_icon.svg_label"
+        },
+        {
+          "identifier": "support_icon",
+          "type": "file",
+          "description": "support_icon_description",
+          "label": "support_icon_label"
+        },
+        {
+          "identifier": "arrow_down_image",
+          "type": "file",
+          "description": "arrow_down_image_description",
+          "label": "arrow_down_image_label"
+        },
+        {
+          "identifier": "arrow_up_image",
+          "type": "file",
+          "description": "arrow_up_image_description",
+          "label": "arrow_up_image_label"
+        },
+        {
+          "identifier": "arrow_hover_image",
+          "type": "file",
+          "description": "arrow_hover_image_description",
+          "label": "arrow_hover_image_label"
         }
       ]
     },
@@ -275,6 +293,12 @@
           "type": "file",
           "description": "header_script_description",
           "label": "header_script_label"
+        },
+        {
+          "identifier": "home_script",
+          "type": "file",
+          "description": "home_script_description",
+          "label": "home_script_label"
         }
       ]
     },

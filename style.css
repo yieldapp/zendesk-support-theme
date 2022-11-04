@@ -4721,3 +4721,16 @@ html[dir="rtl"] .notification-left-aligned {
 .waves-bg {
   background-image: url($waves);
 }
+
+.arrow-bg {
+  background-image: url($arrow_down_image);
+}
+
+.arrow-bg:hover {
+  background-image: url($arrow_hover_image);
+}
+
+.arrow-bg.active {
+  background-image: url($arrow_up_image);
+}
+
