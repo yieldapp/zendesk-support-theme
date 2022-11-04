@@ -4706,6 +4706,10 @@ html[dir="rtl"] .notification-left-aligned {
   background-color: $background_color;
 }
 
+.brand-border-color {
+  border-color: $brand_color_v2;
+}
+
 .brand-text-color {
   color: $brand_text_color;
 }

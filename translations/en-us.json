@@ -63,7 +63,9 @@
   "community_topic_group_label": "Community topic elements",
   "follow_topic_label": "Follow",
   "follow_topic_description": "Users can follow a specific topic",
-  "submit_request": "Submit a request",
   "hero_title": "Yield App Help Center",
-  "hero_description": "Yield App’s Customer Support is online 24/7 to help with your needs."
+  "hero_description": "Yield App’s Customer Support is online 24/7 to help with your needs.",
+  "section_faq_title": "FAQ",
+  "section_faq_description": "Everything you need to know to use Yield App",
+  "submit_a_request_description": "Contact our support experts for help"
 }

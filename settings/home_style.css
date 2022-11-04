@@ -6,6 +6,7 @@
     padding: 0 20px;
     text-align: center;
     width: 100%;
+    margin: 0;
 }
 
 .hero-title {
@@ -51,4 +52,50 @@
     position: absolute;
     top: 27px;
     left: 24px;
+}
+
+.hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 82px;
+    width: 100%;
+    margin-bottom: 200px;
+    margin-top: -180px;
+}
+
+.hero-buttons .hero-buttons-item  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 365px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 32px;
+}
+
+.hero-buttons .hero-buttons-item:first-child {
+    justify-self: end;
+}
+
+.hero-buttons .hero-buttons-item-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.hero-buttons .hero-buttons-item-title {
+    padding-top: 24px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.hero-buttons .hero-buttons-item-description {
+    padding-top: 8px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
 }
