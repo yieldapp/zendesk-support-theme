@@ -6,7 +6,7 @@
 .header .header-container {
     max-width: 1160px;
     margin: 0 auto;
-    padding: 52px 5% 0;
+    padding: 52px 5% 32px;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -46,4 +46,17 @@
     border: none;
     cursor: pointer;
     margin-right: 32px;
+}
+
+.header .user-info {
+    margin-left: 32px;
+}
+
+.header .user-info > button {
+    color: white;
+}
+
+.header .header-language-selector {
+    width: 50px;
+    text-align: center;
 }

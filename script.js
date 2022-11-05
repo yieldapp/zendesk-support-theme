@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
   Array.prototype.forEach.call(collapsible, function(el) {
     var toggle = el.querySelector('.collapsible-nav-toggle, .collapsible-sidebar-toggle');
 
-    el.addEventListener('click', function(e) {
+    el.addEventListener('click', function() {
       toggleNavigation(toggle, this);
     });
 
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (subsectionsList && subsectionsList.children.length > 6) {
     seeAllTrigger.setAttribute("aria-hidden", false);
 
-    seeAllTrigger.addEventListener("click", function(e) {
+    seeAllTrigger.addEventListener("click", function() {
       subsectionsList.classList.remove("section-list--collapsed");
       seeAllTrigger.parentNode.removeChild(seeAllTrigger);
     });
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
     this.toggle.addEventListener("click", this.clickHandler.bind(this));
     this.toggle.addEventListener("keydown", this.toggleKeyHandler.bind(this));
     this.menu.addEventListener("keydown", this.menuKeyHandler.bind(this));
-  };
+  }
 
   Dropdown.prototype = {
 
@@ -397,4 +397,26 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  /* Syntetic data action click */
+  document.addEventListener("click", (event) => {
+    const element = event.target
+    const currentLanguage = getCurrentLocale();
+    const checkElement = (node) => {
+      if (!node || node.tagName.toLowerCase() === "html") {
+        return;
+      }
+      if (node.matches("[data-action=request]")) {
+        location.href = `/hc/${currentLanguage}/requests/new`
+      } else {
+        checkElement(node.parentNode)
+      }
+    }
+    checkElement(element)
+  })
+
+  window.getCurrentLocale = () => {
+    const linkParts = location.pathname.split("/");
+    return linkParts[2] || "en-us";
+  }
 });

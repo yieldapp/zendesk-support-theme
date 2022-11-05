@@ -13,7 +13,7 @@
     font-weight: 700;
     font-size: 64px;
     line-height: 83px;
-    padding-top: 68px;
+    padding-top: 32px;
 }
 
 .hero-description {
@@ -75,6 +75,7 @@
     flex-direction: column;
     text-align: center;
     padding: 0 32px;
+    cursor: pointer;
 }
 
 .hero-buttons .hero-buttons-item:first-child {
@@ -141,6 +142,11 @@
 .help-center-section-name.active {
     color: #1F63FF;
     font-weight: 700;
+}
+
+.help-center-section ::selection,
+.help-center-section ::-moz-selection {
+    background-color: transparent;
 }
 
 .help-center-section-articles {

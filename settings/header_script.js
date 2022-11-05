@@ -1,31 +1,30 @@
 const getLocales = async () => await Promise.all([
     fetch('/api/v2/locales/public'),
     fetch('/api/v2/help_center/locales'),
-    fetch('/api/v2/locales/current/') // TODO: API did not work
 ])
-    .then(([allLocalesData, hcLocalesData, currentLocaleData]) =>
-        Promise.all([allLocalesData.json(), hcLocalesData.json(), currentLocaleData.json()])
+    .then(([allLocalesData, hcLocalesData]) =>
+        Promise.all([allLocalesData.json(), hcLocalesData.json()])
     )
-    .then(([allLocales, hcLocales, current]) =>
-        ({
-            locales: hcLocales.locales.map(hcL =>
-                allLocales.locales.find(l => l.locale.toLowerCase() === hcL.toLowerCase())
-            ),
-            current: current.locale
-        })
+    .then(([allLocales, hcLocales]) => hcLocales.locales.map(hcL =>
+            allLocales.locales.find(l => l.locale.toLowerCase() === hcL.toLowerCase())
+        )
     );
 
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const { current, locales } = await getLocales();
+    const locales = await getLocales();
+    const current = getCurrentLocale();
     const wrapperElement = document.querySelector(".async-language-selector");
 
-    wrapperElement.querySelector('.dropdown-toggle').textContent = current.locale
+    wrapperElement.querySelector('.dropdown-toggle').textContent = current
     wrapperElement.querySelector('.dropdown-menu').innerHTML =
         locales.reduce((html, { rtl, name, locale }) => {
+            if (locale.toLowerCase()  === current.toLowerCase() ) {
+                return html;
+            }
             const formattedPathname = location.pathname
                 .split('/')
-                .map(part => part.toLowerCase() === current.locale.toLowerCase() ?
+                .map(part => part.toLowerCase() === current.toLowerCase() ?
                     locale.toLowerCase() :
                     part.toLowerCase())
                 .join('/');
