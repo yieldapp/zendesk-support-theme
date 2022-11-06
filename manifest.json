@@ -6,6 +6,23 @@
   "default_locale": "en-us",
   "settings": [
     {
+      "label": "font_group_label",
+      "variables": [
+        {
+          "identifier": "suisse_intl_regular",
+          "type": "file",
+          "description": "suisse_intl_regular_description",
+          "label": "suisse_intl_regular_label"
+        },
+        {
+          "identifier": "suisse_intl_semi_bold",
+          "type": "file",
+          "description": "suisse_intl_semi_bold_description",
+          "label": "suisse_intl_semi_bold_label"
+        }
+      ]
+    },
+    {
       "label": "colors_group_label",
       "variables": [
         {
@@ -60,7 +77,7 @@
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
-          "value": "'Helvetica Neue', Arial, Helvetica, sans-serif",
+          "value": "Suisse Intl, sans-serif",
           "options": [
             {
               "label": "System",
@@ -125,6 +142,10 @@
             {
               "label": "Trebuchet MS",
               "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Suisse Intl",
+              "value": "Suisse Intl, sans-serif"
             }
           ]
         },
@@ -133,7 +154,7 @@
           "type": "list",
           "description": "text_font_description",
           "label": "text_font_label",
-          "value": "'Helvetica Neue', Arial, Helvetica, sans-serif",
+          "value": "Suisse Intl, sans-serif",
           "options": [
             {
               "label": "System",
@@ -198,6 +219,10 @@
             {
               "label": "Trebuchet MS",
               "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Suisse Intl",
+              "value": "Suisse Intl, sans-serif"
             }
           ]
         }
