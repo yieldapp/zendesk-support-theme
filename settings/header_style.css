@@ -66,6 +66,12 @@
     text-align: center;
 }
 
+.header .header-language-selector a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+}
+
 @media (max-width: 767px) {
     .header .header-container {
         flex-direction: column;
@@ -92,5 +98,10 @@
 
     .header .header-language-selector {
         margin-top: 12px;
+    }
+
+    .header .header-language-selector a {
+        font-size: 12px;
+        line-height: 24px;
     }
 }

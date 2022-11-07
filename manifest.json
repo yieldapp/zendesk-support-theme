@@ -254,6 +254,18 @@
           "type": "file",
           "description": "favicon_description",
           "label": "favicon_label"
+        },
+        {
+          "identifier": "apple_store",
+          "type": "file",
+          "description": "apple_store_description",
+          "label": "apple_store_label"
+        },
+        {
+          "identifier": "google_play",
+          "type": "file",
+          "description": "google_play_description",
+          "label": "google_play_label"
         }
       ]
     },
@@ -324,6 +336,12 @@
           "type": "file",
           "description": "home_script_description",
           "label": "home_script_label"
+        },
+        {
+          "identifier": "footer_script",
+          "type": "file",
+          "description": "footer_script_description",
+          "label": "footer_script_label"
         }
       ]
     },
@@ -341,6 +359,12 @@
           "type": "file",
           "description": "home_style_description",
           "label": "home_style_label"
+        },
+        {
+          "identifier": "footer_style",
+          "type": "file",
+          "description": "footer_style_description",
+          "label": "footer_style_label"
         }
       ]
     },
