@@ -342,6 +342,18 @@
           "type": "file",
           "description": "footer_script_description",
           "label": "footer_script_label"
+        },
+        {
+          "identifier": "shared_script",
+          "type": "file",
+          "description": "shared_script_description",
+          "label": "shared_script_label"
+        },
+        {
+          "identifier": "translations_script",
+          "type": "file",
+          "description": "translations_script_description",
+          "label": "translations_script_label"
         }
       ]
     },

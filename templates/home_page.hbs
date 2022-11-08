@@ -1,14 +1,8 @@
 <link rel="stylesheet" type="text/css" href="{{settings.home_style}}">
 
 <section id="main-content" class="section hero brand-color waves-bg">
-  <div class="hero-title brand-text-color">
-    {{!-- TODO: need translation --}}
-    Yield App Help Center
-  </div>
-  <div class="hero-description brand-text-color">
-    {{!-- TODO: need translation --}}
-    Yield App’s Customer Support is online 24/7 to help with your needs.
-  </div>
+  <div class="hero-title brand-text-color" data-translation-key="hero_title"></div>
+  <div class="hero-description brand-text-color" data-translation-key="hero_description"></div>
   <div class="hero-inner">
     <h2 class="visibility-hidden">{{ t 'search' }}</h2>
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
@@ -22,19 +16,13 @@
 <section class="hero-buttons">
     <div class="hero-buttons-item brand-border-color brand-color-inverted">
         <img class="hero-buttons-item-image" src="{{settings.faq_icon}}" alt="{{t 'section_faq'}}">
-        <div class="hero-buttons-item-title brand-text-color-inverted">
-            FAQ {{!-- TODO: need translation --}}
-        </div>
-        <div class="hero-buttons-item-description">
-          Everything you need to know to use Yield App {{!-- TODO: need translation --}}
-        </div>
+        <div class="hero-buttons-item-title brand-text-color-inverted" data-translation-key="section_faq_title"></div>
+        <div class="hero-buttons-item-description" data-translation-key="section_faq_description"></div>
     </div>
     <div class="hero-buttons-item brand-border-color brand-color-inverted" data-action="request">
         <img class="hero-buttons-item-image" src="{{settings.support_icon}}" alt="{{t 'home_page'}}">
         <div class="hero-buttons-item-title brand-text-color-inverted">{{ t 'submit_a_request' }}</div>
-        <div class="hero-buttons-item-description">
-          Contact our support experts for help {{!-- TODO: need translation --}}
-        </div>
+        <div class="hero-buttons-item-description" data-translation-key="submit_a_request_description"></div>
     </div>
 </section>
 
