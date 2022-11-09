@@ -1,48 +1,45 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon">
+<link rel="stylesheet" type="text/css" href="{{settings.article_style}}">
+<section class="article-hero brand-color waves-bg">
+    <div class="hero-inner">
+      <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
         <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
         <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
       </svg>
-      {{search scoped=settings.scoped_kb_search submit=false}}
+      {{search submit=false instant=settings.instant_search class='search search-full'}}
     </div>
-  </nav>
+</section>
+<div class="container article-page">
+  <div class="article-breadcrumbs">
+    {{breadcrumbs}}
+  </div>
 
-  <div class="article-container" id="article-container">
-    <aside class="article-sidebar" aria-labelledby="section-articles-title">
+{{!-- /api/v2/help_center/en-us/articles/360015389618 --}}
+{{!-- /api/v2/help_center/en-us/sections/360004484757/articles --}}
+{{!-- /api/v2/help_center/users/377005085537 --}}
+
+  <div class="article-container">
+    <div class="article-sidebar">
       {{#if settings.show_articles_in_section}}
         <div class="collapsible-sidebar">
-          <button type="button" class="collapsible-sidebar-toggle" aria-labelledby="section-articles-title" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon x-icon">
-              <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
-            </svg>
-          </button>
-          <span id="section-articles-title" class="collapsible-sidebar-title sidenav-title">
+          <span class="articles-title brand-text-color-inverted">
             {{t 'articles_in_section'}}
           </span>
-          <div class="collapsible-sidebar-body">
-            <ul>
-              {{#each section.articles}}
-                <li>
-                  <a href="{{url}}" class="sidenav-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
-                </li>
-              {{/each}}
-            </ul>
+          <div class="articles-list">
+            {{#each section.articles}}
+              <a href="{{url}}" class="articles-list-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
+            {{/each}}
             {{#if section.more_articles}}
-              <a href="{{section.url}}" class="article-sidebar-item">{{t 'see_more'}}</a>
+              <a href="{{section.url}}" class="articles-list-see-more">{{t 'see_more'}}</a>
             {{/if}}
           </div>
         </div>
       {{/if}}
-    </aside>
+    </div>
 
-    <article id="main-content" class="article">
+    {{!-- TODO  --}}
+
+    <article class="article">
       <header class="article-header">
         <h1 title="{{article.title}}" class="article-title">
           {{article.title}}

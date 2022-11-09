@@ -377,6 +377,18 @@
           "type": "file",
           "description": "footer_style_description",
           "label": "footer_style_label"
+        },
+        {
+          "identifier": "article_style",
+          "type": "file",
+          "description": "article_style_description",
+          "label": "article_style_label"
+        },
+        {
+          "identifier": "shared_style",
+          "type": "file",
+          "description": "shared_style_description",
+          "label": "shared_style_label"
         }
       ]
     },

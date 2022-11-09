@@ -23,29 +23,6 @@
     padding-top: 6px;
 }
 
-.hero-inner {
-    max-width: 750px;
-    position: relative;
-    margin: 32px auto 0;
-}
-
-.hero-inner input[type="search"] {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
-    padding: 20px 20px 20px 60px;
-    color: #104499;
-    border-radius: 100px;
-    height: 68px;
-    border: none;
-}
-
-.hero-inner input[type="search"]::placeholder,
-.hero-inner input[type="search"]:focus {
-    border: none;
-    color: #104499;
-}
-
 .hero .search-icon {
     color: #104499;
     transform: scale(1.5);
