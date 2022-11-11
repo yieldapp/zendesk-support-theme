@@ -9,6 +9,10 @@
     margin: 0;
 }
 
+.hero-inner {
+    margin: 32px auto 0;
+}
+
 .hero-title {
     font-weight: 700;
     font-size: 64px;
@@ -21,14 +25,6 @@
     font-size: 24px;
     line-height: 32px;
     padding-top: 6px;
-}
-
-.hero .search-icon {
-    color: #104499;
-    transform: scale(1.5);
-    position: absolute;
-    top: 27px;
-    left: 24px;
 }
 
 .hero-buttons {
@@ -198,10 +194,6 @@
         padding-top: 28px;
     }
 
-    .hero-inner {
-        width: 90%;
-    }
-
     .hero-description {
         font-size: 14px;
         line-height: 24px;
@@ -210,20 +202,6 @@
     .hero-buttons {
         grid-template-columns: 1fr;
         margin-top: -379px;
-    }
-
-    .hero-inner input[type="search"] {
-        font-size: 14px;
-        line-height: 32px;
-        padding: 12px 12px 12px 30px;
-        border-radius: 100px;
-        height: 39px;
-    }
-
-    .hero .search-icon {
-        transform: scale(0.75);
-        top: 10px;
-        left: 10px;
     }
 
     .help-center-section {

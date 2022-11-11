@@ -1,7 +1,7 @@
 .hero-inner {
     max-width: 750px;
     position: relative;
-    margin: 32px auto 0;
+    width: 100%;
 }
 
 .hero-inner input[type="search"] {
@@ -19,4 +19,29 @@
 .hero-inner input[type="search"]:focus {
     border: none;
     color: #104499;
+}
+
+.hero-inner .search-icon {
+    color: #104499;
+    transform: scale(1.5);
+    position: absolute;
+    top: 27px;
+    left: 24px;
+}
+
+
+@media (max-width: 767px) {
+    .hero-inner input[type="search"] {
+        font-size: 14px;
+        line-height: 32px;
+        padding: 12px 12px 12px 30px;
+        border-radius: 100px;
+        height: 39px;
+    }
+
+    .hero-inner .search-icon {
+        transform: scale(0.75);
+        top: 10px;
+        left: 10px;
+    }
 }
