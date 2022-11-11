@@ -4403,6 +4403,118 @@ html[dir="rtl"] .notification-left-aligned {
   vertical-align: middle;
 }
 
+/***** Article *****/
+
+.article [role="button"] {
+  flex-shrink: 0;
+  /*Avoid collapsing elements in Safari (https://github.com/philipwalton/flexbugs#1-minimum-content-sizing-of-flex-items-not-honored)*/
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .article [role="button"] {
+    width: auto;
+  }
+}
+
+.article-body img {
+  height: auto;
+  max-width: 100%;
+}
+
+.article-body ul, .article-body ol {
+  padding-left: 20px;
+  list-style-position: outside;
+  margin: 20px 0 20px 20px;
+}
+
+[dir="rtl"] .article-body ul, [dir="rtl"] .article-body ol {
+  padding-right: 20px;
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.article-body ul > ul, .article-body ol > ol, .article-body ol > ul, .article-body ul > ol, .article-body li > ul, .article-body li > ol {
+  margin: 0;
+}
+
+.article-body ul {
+  list-style-type: disc;
+}
+
+.article-body a:visited {
+  color: darken($link_color, 20%);
+}
+
+.article-body code {
+  background: darken($background_color, 3%);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0 5px;
+  margin: 0 2px;
+}
+
+.article-body pre {
+  background: darken($background_color, 3%);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px 15px;
+  overflow: auto;
+  white-space: pre;
+}
+
+.article-body blockquote {
+  border-left: 1px solid #ddd;
+  color: lighten($text_color, 20%);
+  font-style: italic;
+  padding: 0 15px;
+}
+
+.article-body > p:last-child {
+  margin-bottom: 0;
+}
+
+.article-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.article-comment-count {
+  color: lighten($text_color, 20%);
+  font-weight: 300;
+}
+
+.article-comment-count:hover {
+  text-decoration: none;
+}
+
+.article-comment-count-icon {
+  vertical-align: middle;
+  color: $brand_color;
+  width: 18px;
+  height: 18px;
+}
+
+.article-relatives > * {
+  flex: 1 0 50%;
+  min-width: 50%;
+  overflow-wrap: break-word;
+  margin-right: 0;
+}
+
+.article-relatives > *:last-child {
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .article-relatives > * {
+    padding-right: 20px;
+  }
+}
+
 /*  */
 .brand-color {
   background-color: $brand_color_v2;
