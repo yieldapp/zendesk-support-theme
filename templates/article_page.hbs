@@ -21,7 +21,7 @@
   <div class="article-container">
     <div class="article-sidebar">
       {{#if settings.show_articles_in_section}}
-        <div class="collapsible-sidebar">
+        <div>
           <span class="articles-title brand-text-color-inverted">
             {{t 'articles_in_section'}}
           </span>
@@ -37,11 +37,9 @@
       {{/if}}
     </div>
 
-    {{!-- TODO  --}}
-
     <article class="article">
       <header class="article-header">
-        <h1 title="{{article.title}}" class="article-title">
+        <h1 title="{{article.title}}" class="article-title brand-text-color-inverted">
           {{article.title}}
           {{#if article.internal}}
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
@@ -73,8 +71,7 @@
               {{#is article.created_at article.edited_at}}
                 <li class="meta-data">{{date article.created_at timeago=true}}</li>
               {{else}}
-                <li class="meta-data">{{date article.edited_at timeago=true}}</li>
-                <li class="meta-data">{{t 'updated'}}</li>
+                <li class="meta-data">{{t 'updated'}} {{date article.edited_at timeago=true}}</li>
               {{/is}}
             </ul>
           </div>
@@ -133,12 +130,12 @@
           <div class="article-votes">
             <span class="article-votes-question" id="article-votes-label">{{t 'was_this_article_helpful'}}</span>
             <div class="article-votes-controls" role="group" aria-labelledby="article-votes-label">
-              {{vote 'up' role='radio' class='button article-vote article-vote-up' selected_class="button-primary"}}
+              {{vote 'up' role='radio' class='button article-vote article-vote-up brand-color brand-text-color' selected_class="button-primary"}}
               {{vote 'down' role='radio' class='button article-vote article-vote-down' selected_class="button-primary"}}
             </div>
-            <small class="article-votes-count">
+            <div class="article-votes-count">
               {{vote 'label' class='article-vote-label'}}
-            </small>
+            </div>
           </div>
         {{/with}}
 

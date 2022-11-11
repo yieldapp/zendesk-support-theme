@@ -17,7 +17,7 @@
 }
 
 .article-page {
-    max-width: 1160px;
+    max-width: 1260px;
     margin: 0 auto;
     padding: 64px 5% 0;
     display: flex;
@@ -70,35 +70,12 @@
     color: #1F63FF;
 }
 
-
-/***** Article *****/
 .article {
-    /*
-    * The article grid is defined this way to optimize readability:
-    * Sidebar | Content | Free space
-    * 17%     | 66%     | 17%
-    */
-    flex: 1 0 auto;
-}
 
-@media (min-width: 1024px) {
-    .article {
-        flex: 1 0 66%;
-        max-width: 66%;
-        min-width: 640px;
-        padding: 0 30px;
-    }
 }
 
 .article-container {
     display: flex;
-    flex-direction: column;
-}
-
-@media (min-width: 1024px) {
-    .article-container {
-        flex-direction: row;
-    }
 }
 
 .article-header {
@@ -107,37 +84,123 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 40px;
-    margin-top: 20px;
 }
 
-@media (min-width: 768px) {
-    .article-header {
-        flex-direction: row;
-        margin-top: 0;
-    }
+.article-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    margin-bottom: 16px;
+}
+
+.article-title .icon-lock {
+    position: relative;
+    vertical-align: baseline;
+}
+
+.article-author {
+    display: flex;
 }
 
 .article-avatar {
     margin-right: 10px;
 }
 
-.article-author {
-    margin-bottom: 10px;
+.article-meta {
+    display: flex;
+    flex-direction: column;
 }
 
-@media (min-width: 768px) {
-    .article-title {
-        flex-basis: 100%;
-        /* Take entire row */
-    }
+.article-meta a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
 }
 
-.article-title .icon-lock {
-    position: relative;
-    left: -5px;
-    vertical-align: baseline;
+.meta-data {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    font-style: italic;
 }
+
+.article-info {
+    padding-top: 20px;
+    max-width: 100%;
+}
+
+.article-content {
+    margin: 64px 0;
+    word-wrap: break-word;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.article-votes {
+    padding: 32px;
+    text-align: center;
+    background: rgba(31, 99, 255, 0.1);
+    border: 1px solid #1F63FF;
+    border-radius: 10px;
+}
+
+.article-votes-controls {
+    margin-top: 40px;
+}
+
+.article-vote {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 12px 40px;
+    margin: 0 16px;
+}
+
+.article-votes-question {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.article-more-questions {
+    margin-top: 32px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.article-votes-count {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.article-relatives {
+    display: flex;
+    margin: 64px 0 20px 0;
+}
+
+.recent-articles-title,
+.related-articles-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 16px;
+    color: #104499;
+}
+
+.article-relatives a,
+.related-articles a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: black;
+}
+
+    /***** Article *****/
 
 .article [role="button"] {
     flex-shrink: 0;
@@ -149,15 +212,6 @@
     .article [role="button"] {
         width: auto;
     }
-}
-
-.article-info {
-    max-width: 100%;
-}
-
-.article-meta {
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .article-body img {
@@ -218,12 +272,6 @@
     margin-bottom: 0;
 }
 
-.article-content {
-    line-height: 1.6;
-    margin: 40px 0;
-    word-wrap: break-word;
-}
-
 .article-footer {
     align-items: center;
     display: flex;
@@ -247,19 +295,6 @@
     height: 18px;
 }
 
-.article-relatives {
-    border-top: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0;
-}
-
-@media (min-width: 768px) {
-    .article-relatives {
-        flex-direction: row;
-    }
-}
-
 .article-relatives > * {
     flex: 1 0 50%;
     min-width: 50%;
@@ -275,23 +310,6 @@
     .article-relatives > * {
         padding-right: 20px;
     }
-}
-
-.article-votes {
-    border-top: 1px solid #ddd;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.article-vote {
-    margin: 10px 5px;
-    min-width: 90px;
-    width: auto;
-}
-
-.article-more-questions {
-    margin: 10px 0 20px;
-    text-align: center;
 }
 
 .article-return-to-top {
