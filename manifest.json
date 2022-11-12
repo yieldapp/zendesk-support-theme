@@ -319,6 +319,18 @@
           "type": "file",
           "description": "arrow_hover_image_description",
           "label": "arrow_hover_image_label"
+        },
+        {
+          "identifier": "wires",
+          "type": "file",
+          "description": "wires_image_description",
+          "label": "wires_image_label"
+        },
+        {
+          "identifier": "404_error",
+          "type": "file",
+          "description": "404_error_image_description",
+          "label": "404_error_image_label"
         }
       ]
     },
@@ -389,6 +401,12 @@
           "type": "file",
           "description": "shared_style_description",
           "label": "shared_style_label"
+        },
+        {
+          "identifier": "error_style",
+          "type": "file",
+          "description": "error_style_description",
+          "label": "error_style_label"
         }
       ]
     },

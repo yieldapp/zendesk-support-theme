@@ -133,7 +133,6 @@
 
     .header-mobile-action .request-button {
         display: block;
-        margin-right: 0;
-        margin-top: 32px;
+        margin: 32px 0;
     }
 }

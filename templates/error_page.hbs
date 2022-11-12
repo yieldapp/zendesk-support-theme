@@ -1,21 +1,42 @@
+<link rel="stylesheet" type="text/css" href="{{settings.error_style}}">
+
 <div class="container-divider"></div>
 <div id="main-content" class="error-page">
-  <h1>{{t 'oops'}}</h1>
+    {{#is error 'not_found'}}
+        <div class="error-container">
+            <div class="error-container-image">
+                <img class="mb" src="{{settings.404_error}}" alt="404">
+            </div>
+            <div class="error-container-title brand-text-color-inverted">{{t 'nonexistent_page'}}</div>
+            <div class="error-container-description">
+                <div class="error-container-description-text">
+                    <p class="error-container-description-title">{{t 'mistyped_address_or_moved_page'}}</p>
+                    <button class="error-container-description-button brand-color">
+                        {{#link 'help_center'}}
+                          {{t 'back_to_homepage'}}
+                        {{/link}}
+                    </button>
+                </div>
+                <div class="error-container-description-wrapper">
+                    <div style="background-image: url({{settings.wires}})" class="error-container-description-wrapper-image"/>
+                </div>
+            </div>
+        </div>
+    {{/is}}
 
-  {{#is error 'unauthorized'}}
-    <h2>{{link 'sign_in'}}</h2>
-  {{/is}}
+    {{#is error 'unauthorized'}}
+      <h1>{{t 'oops'}}</h1>
+      <h2>{{link 'sign_in'}}</h2>
+      {{#link 'help_center'}}
+        {{t 'back_to_homepage'}}
+      {{/link}}
+    {{/is}}
 
-  {{#is error 'forbidden'}}
-    <h2>{{t 'not_authorized'}}</h2>
-  {{/is}}
-
-  {{#is error 'not_found'}}
-    <h2>{{t 'nonexistent_page'}}</h2>
-    <p>{{t 'mistyped_address_or_moved_page'}}</p>
-  {{/is}}
-
-  {{#link 'help_center'}}
-    {{t 'back_to_homepage'}}
-  {{/link}}
+    {{#is error 'forbidden'}}
+      <h1>{{t 'oops'}}</h1>
+      <h2>{{t 'not_authorized'}}</h2>
+      {{#link 'help_center'}}
+        {{t 'back_to_homepage'}}
+      {{/link}}
+    {{/is}}
 </div>
