@@ -413,6 +413,18 @@
           "type": "file",
           "description": "section_style_description",
           "label": "section_style_label"
+        },
+        {
+          "identifier": "search_style",
+          "type": "file",
+          "description": "search_style_description",
+          "label": "search_style_label"
+        },
+        {
+          "identifier": "request_style",
+          "type": "file",
+          "description": "request_style_description",
+          "label": "request_style_label"
         }
       ]
     },
