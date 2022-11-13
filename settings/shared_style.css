@@ -1,3 +1,14 @@
+.hero-with-search {
+    background-position: center top;
+    background-size: cover;
+    padding: 64px 32px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
 .hero-inner {
     max-width: 750px;
     position: relative;
@@ -29,6 +40,25 @@
     left: 24px;
 }
 
+.page-breadcrumbs {
+    padding-bottom: 64px;
+}
+
+.page-breadcrumbs .breadcrumbs {
+    margin: 0;
+}
+
+.page-breadcrumbs a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #104499;
+}
+
+.page-breadcrumbs li + li::before {
+    color: #104499;
+    content: "❯"
+}
 
 @media (max-width: 767px) {
     .hero-inner input[type="search"] {
@@ -43,5 +73,10 @@
         transform: scale(0.75);
         top: 10px;
         left: 10px;
+    }
+
+    .page-breadcrumbs a {
+        font-size: 12px;
+        line-height: 16px;
     }
 }

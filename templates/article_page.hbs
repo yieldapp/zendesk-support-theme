@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="{{settings.article_style}}">
-<section class="article-hero brand-color waves-bg">
+<section class="hero-with-search brand-color waves-bg">
     <div class="hero-inner">
       <h2 class="visibility-hidden">{{ t 'search' }}</h2>
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
@@ -10,14 +10,9 @@
     </div>
 </section>
 <div class="container article-page">
-  <div class="article-breadcrumbs">
+  <div class="page-breadcrumbs">
     {{breadcrumbs}}
   </div>
-
-{{!-- /api/v2/help_center/en-us/articles/360015389618 --}}
-{{!-- /api/v2/help_center/en-us/sections/360004484757/articles --}}
-{{!-- /api/v2/help_center/users/377005085537 --}}
-
   <div class="article-container">
     <div class="article-sidebar">
       {{#if settings.show_articles_in_section}}

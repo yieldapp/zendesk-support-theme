@@ -1,20 +1,22 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon">
+<link rel="stylesheet" type="text/css" href="{{settings.section_style}}">
+<section class="hero-with-search brand-color waves-bg">
+    <div class="hero-inner">
+      <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
         <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
         <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
       </svg>
-      {{search submit=false}}
+      {{search submit=false instant=settings.instant_search class='search search-full'}}
     </div>
-  </nav>
-
+</section>
+<div class="container section-page">
+    <div class="page-breadcrumbs">
+      {{breadcrumbs}}
+    </div>
   <div class="section-container">
     <section id="main-content" class="section-content">
       <header class="page-header">
-        <h1>{{section.name}}</h1>
+        <h1 class="brand-text-color-inverted">{{section.name}}</h1>
         {{#if settings.show_follow_section}}
           <div class="section-subscribe">{{subscribe}}</div>
         {{/if}}

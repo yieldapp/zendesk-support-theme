@@ -407,6 +407,12 @@
           "type": "file",
           "description": "error_style_description",
           "label": "error_style_label"
+        },
+        {
+          "identifier": "section_style",
+          "type": "file",
+          "description": "section_style_description",
+          "label": "section_style_label"
         }
       ]
     },

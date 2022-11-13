@@ -1,41 +1,10 @@
 /***** Article hero styles *****/
-.article-hero {
-    background-position: center top;
-    background-size: cover;
-    padding: 64px 32px;
-    text-align: center;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
 .article-page {
     max-width: 1260px;
     margin: 0 auto;
     padding: 64px 5% 0;
     display: flex;
     flex-direction: column;
-}
-
-.article-page .article-breadcrumbs {
-    padding-bottom: 64px;
-}
-
-.article-page .article-breadcrumbs .breadcrumbs {
-    margin: 0;
-}
-
-.article-page .article-breadcrumbs a {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-    color: #104499;
-}
-
-.article-page .article-breadcrumbs li + li::before {
-    color: #104499;
-    content: "❯"
 }
 
 .article-page .articles-title {
@@ -230,11 +199,6 @@
 @media (max-width: 767px) {
     .article-page {
         padding: 64px 31px 0;
-    }
-
-    .article-page .article-breadcrumbs a {
-        font-size: 12px;
-        line-height: 16px;
     }
 
     .article-page .articles-title {
