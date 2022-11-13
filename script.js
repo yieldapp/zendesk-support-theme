@@ -147,20 +147,20 @@ document.addEventListener('DOMContentLoaded', function() {
   var burgerMenu = document.querySelector('.header .menu-button');
   var userMenu = document.querySelector('#user-nav');
 
-  burgerMenu.addEventListener('click', function(e) {
+  burgerMenu?.addEventListener('click', function(e) {
     e.stopPropagation();
     toggleNavigation(this, userMenu);
   });
 
 
-  userMenu.addEventListener('keyup', function(e) {
+  userMenu?.addEventListener('keyup', function(e) {
     if (e.keyCode === ESCAPE) {
       e.stopPropagation();
       closeNavigation(burgerMenu, this);
     }
   });
 
-  if (userMenu.children.length === 0) {
+  if (userMenu?.children.length === 0) {
     burgerMenu.style.display = 'none';
   }
 
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
   Array.prototype.forEach.call(collapsible, function(el) {
     var toggle = el.querySelector('.collapsible-nav-toggle, .collapsible-sidebar-toggle');
 
-    el.addEventListener('click', function(e) {
+    el.addEventListener('click', function() {
       toggleNavigation(toggle, this);
     });
 
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (subsectionsList && subsectionsList.children.length > 6) {
     seeAllTrigger.setAttribute("aria-hidden", false);
 
-    seeAllTrigger.addEventListener("click", function(e) {
+    seeAllTrigger.addEventListener("click", function() {
       subsectionsList.classList.remove("section-list--collapsed");
       seeAllTrigger.parentNode.removeChild(seeAllTrigger);
     });
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Dropdowns
-  
+
   function Dropdown(toggle, menu) {
     this.toggle = toggle;
     this.menu = menu;
@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function() {
     this.toggle.addEventListener("click", this.clickHandler.bind(this));
     this.toggle.addEventListener("keydown", this.toggleKeyHandler.bind(this));
     this.menu.addEventListener("keydown", this.menuKeyHandler.bind(this));
-  };
+  }
 
   Dropdown.prototype = {
 

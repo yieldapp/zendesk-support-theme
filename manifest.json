@@ -6,8 +6,32 @@
   "default_locale": "en-us",
   "settings": [
     {
+      "label": "font_group_label",
+      "variables": [
+        {
+          "identifier": "suisse_intl_regular",
+          "type": "file",
+          "description": "suisse_intl_regular_description",
+          "label": "suisse_intl_regular_label"
+        },
+        {
+          "identifier": "suisse_intl_semi_bold",
+          "type": "file",
+          "description": "suisse_intl_semi_bold_description",
+          "label": "suisse_intl_semi_bold_label"
+        }
+      ]
+    },
+    {
       "label": "colors_group_label",
       "variables": [
+        {
+          "identifier": "brand_color_v2",
+          "type": "color",
+          "description": "brand_color_description",
+          "label": "brand_color_label",
+          "value": "#104499"
+        },
         {
           "identifier": "brand_color",
           "type": "color",
@@ -53,7 +77,7 @@
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
-          "value": "'Helvetica Neue', Arial, Helvetica, sans-serif",
+          "value": "Suisse Intl, sans-serif",
           "options": [
             {
               "label": "System",
@@ -118,6 +142,10 @@
             {
               "label": "Trebuchet MS",
               "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Suisse Intl",
+              "value": "Suisse Intl, sans-serif"
             }
           ]
         },
@@ -126,7 +154,7 @@
           "type": "list",
           "description": "text_font_description",
           "label": "text_font_label",
-          "value": "'Helvetica Neue', Arial, Helvetica, sans-serif",
+          "value": "Suisse Intl, sans-serif",
           "options": [
             {
               "label": "System",
@@ -191,6 +219,10 @@
             {
               "label": "Trebuchet MS",
               "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Suisse Intl",
+              "value": "Suisse Intl, sans-serif"
             }
           ]
         }
@@ -206,10 +238,34 @@
           "label": "logo_label"
         },
         {
+          "identifier": "logo_white",
+          "type": "file",
+          "description": "logo_description",
+          "label": "logo_label"
+        },
+        {
+          "identifier": "waves",
+          "type": "file",
+          "description": "waves_description",
+          "label": "waves_label"
+        },
+        {
           "identifier": "favicon",
           "type": "file",
           "description": "favicon_description",
           "label": "favicon_label"
+        },
+        {
+          "identifier": "apple_store",
+          "type": "file",
+          "description": "apple_store_description",
+          "label": "apple_store_label"
+        },
+        {
+          "identifier": "google_play",
+          "type": "file",
+          "description": "google_play_description",
+          "label": "google_play_label"
         }
       ]
     },
@@ -233,6 +289,142 @@
           "type": "file",
           "description": "community_image_description",
           "label": "community_image_label"
+        },
+        {
+          "identifier": "faq_icon",
+          "type": "file",
+          "description": "faq_icon_description",
+          "label": "faq_icon.svg_label"
+        },
+        {
+          "identifier": "support_icon",
+          "type": "file",
+          "description": "support_icon_description",
+          "label": "support_icon_label"
+        },
+        {
+          "identifier": "arrow_down_image",
+          "type": "file",
+          "description": "arrow_down_image_description",
+          "label": "arrow_down_image_label"
+        },
+        {
+          "identifier": "arrow_up_image",
+          "type": "file",
+          "description": "arrow_up_image_description",
+          "label": "arrow_up_image_label"
+        },
+        {
+          "identifier": "arrow_hover_image",
+          "type": "file",
+          "description": "arrow_hover_image_description",
+          "label": "arrow_hover_image_label"
+        },
+        {
+          "identifier": "wires",
+          "type": "file",
+          "description": "wires_image_description",
+          "label": "wires_image_label"
+        },
+        {
+          "identifier": "404_error",
+          "type": "file",
+          "description": "404_error_image_description",
+          "label": "404_error_image_label"
+        }
+      ]
+    },
+    {
+      "label": "scripts_group_label",
+      "variables": [
+        {
+          "identifier": "header_script",
+          "type": "file",
+          "description": "header_script_description",
+          "label": "header_script_label"
+        },
+        {
+          "identifier": "home_script",
+          "type": "file",
+          "description": "home_script_description",
+          "label": "home_script_label"
+        },
+        {
+          "identifier": "footer_script",
+          "type": "file",
+          "description": "footer_script_description",
+          "label": "footer_script_label"
+        },
+        {
+          "identifier": "shared_script",
+          "type": "file",
+          "description": "shared_script_description",
+          "label": "shared_script_label"
+        },
+        {
+          "identifier": "translations_script",
+          "type": "file",
+          "description": "translations_script_description",
+          "label": "translations_script_label"
+        }
+      ]
+    },
+    {
+      "label": "styles_group_label",
+      "variables": [
+        {
+          "identifier": "header_style",
+          "type": "file",
+          "description": "header_style_description",
+          "label": "header_style_label"
+        },
+        {
+          "identifier": "home_style",
+          "type": "file",
+          "description": "home_style_description",
+          "label": "home_style_label"
+        },
+        {
+          "identifier": "footer_style",
+          "type": "file",
+          "description": "footer_style_description",
+          "label": "footer_style_label"
+        },
+        {
+          "identifier": "article_style",
+          "type": "file",
+          "description": "article_style_description",
+          "label": "article_style_label"
+        },
+        {
+          "identifier": "shared_style",
+          "type": "file",
+          "description": "shared_style_description",
+          "label": "shared_style_label"
+        },
+        {
+          "identifier": "error_style",
+          "type": "file",
+          "description": "error_style_description",
+          "label": "error_style_label"
+        },
+        {
+          "identifier": "section_style",
+          "type": "file",
+          "description": "section_style_description",
+          "label": "section_style_label"
+        },
+        {
+          "identifier": "search_style",
+          "type": "file",
+          "description": "search_style_description",
+          "label": "search_style_label"
+        },
+        {
+          "identifier": "request_style",
+          "type": "file",
+          "description": "request_style_description",
+          "label": "request_style_label"
         }
       ]
     },

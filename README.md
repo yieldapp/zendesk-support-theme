@@ -28,3 +28,9 @@ P.P.S To avoide "http->http**s**" redirect use "Delete domain security policies"
 
 ### Also this page can help to fix local dev issues 
 https://www.technipages.com/chrome-enabledisable-not-secure-warning
+
+### zendesk api documentation 
+https://developer.zendesk.com/api-reference/
+
+### hbs syntax
+https://handlebarsjs.com/guide/builtin-helpers.html#each

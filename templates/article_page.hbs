@@ -1,50 +1,38 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon">
+<link rel="stylesheet" type="text/css" href="{{settings.article_style}}">
+<section class="hero-with-search brand-color waves-bg">
+    <div class="hero-inner">
+      <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
         <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
         <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
       </svg>
-      {{search scoped=settings.scoped_kb_search submit=false}}
+      {{search submit=false instant=settings.instant_search class='search search-full'}}
     </div>
-  </nav>
-
-  <div class="article-container" id="article-container">
-    <aside class="article-sidebar" aria-labelledby="section-articles-title">
+</section>
+<div class="container article-page">
+  <div class="page-breadcrumbs">
+    {{breadcrumbs}}
+  </div>
+  <div class="article-container">
+    <div class="article-sidebar">
       {{#if settings.show_articles_in_section}}
-        <div class="collapsible-sidebar">
-          <button type="button" class="collapsible-sidebar-toggle" aria-labelledby="section-articles-title" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon x-icon">
-              <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
-            </svg>
-          </button>
-          <span id="section-articles-title" class="collapsible-sidebar-title sidenav-title">
+          <span class="articles-title brand-text-color-inverted">
             {{t 'articles_in_section'}}
           </span>
-          <div class="collapsible-sidebar-body">
-            <ul>
-              {{#each section.articles}}
-                <li>
-                  <a href="{{url}}" class="sidenav-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
-                </li>
-              {{/each}}
-            </ul>
+          <div class="articles-list">
+            {{#each section.articles}}
+              <a href="{{url}}" class="articles-list-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
+            {{/each}}
             {{#if section.more_articles}}
-              <a href="{{section.url}}" class="article-sidebar-item">{{t 'see_more'}}</a>
+              <a href="{{section.url}}" class="articles-list-see-more">{{t 'see_more'}}</a>
             {{/if}}
           </div>
-        </div>
       {{/if}}
-    </aside>
+    </div>
 
-    <article id="main-content" class="article">
+    <article class="article">
       <header class="article-header">
-        <h1 title="{{article.title}}" class="article-title">
+        <h1 title="{{article.title}}" class="article-title brand-text-color-inverted">
           {{article.title}}
           {{#if article.internal}}
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
@@ -76,8 +64,7 @@
               {{#is article.created_at article.edited_at}}
                 <li class="meta-data">{{date article.created_at timeago=true}}</li>
               {{else}}
-                <li class="meta-data">{{date article.edited_at timeago=true}}</li>
-                <li class="meta-data">{{t 'updated'}}</li>
+                <li class="meta-data">{{t 'updated'}} {{date article.edited_at timeago=true}}</li>
               {{/is}}
             </ul>
           </div>
@@ -136,25 +123,17 @@
           <div class="article-votes">
             <span class="article-votes-question" id="article-votes-label">{{t 'was_this_article_helpful'}}</span>
             <div class="article-votes-controls" role="group" aria-labelledby="article-votes-label">
-              {{vote 'up' role='radio' class='button article-vote article-vote-up' selected_class="button-primary"}}
+              {{vote 'up' role='radio' class='button article-vote article-vote-up brand-color brand-text-color' selected_class="button-primary"}}
               {{vote 'down' role='radio' class='button article-vote article-vote-down' selected_class="button-primary"}}
             </div>
-            <small class="article-votes-count">
+            <div class="article-votes-count">
               {{vote 'label' class='article-vote-label'}}
-            </small>
+            </div>
           </div>
         {{/with}}
 
         <div class="article-more-questions">
           {{request_callout}}
-        </div>
-        <div class="article-return-to-top">
-          <a href="#article-container">
-            {{t 'return_to_top'}}
-            <svg xmlns="http://www.w3.org/2000/svg" class="article-return-to-top-icon" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </a>
         </div>
       </footer>
 
