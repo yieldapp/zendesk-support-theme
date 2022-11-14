@@ -6,6 +6,14 @@
     padding: 60px 72px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    max-width: 1160px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .footer .footer-top {
