@@ -24,7 +24,7 @@
 .footer .footer-top-left {
     display: flex;
     flex-direction: column;
-    padding-right: 32px;
+    padding-right: 64px;
 }
 
 .footer .footer-top-right {
@@ -65,6 +65,7 @@
 .footer .footer-stores img {
     width: 183px;
     margin-bottom: 12px;
+    display: none;
 }
 
 .footer .footer-bottom {

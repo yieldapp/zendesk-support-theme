@@ -1,7 +1,7 @@
 {
   "name": "YIELD",
   "author": "Zendesk",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -262,10 +262,82 @@
           "label": "apple_store_label"
         },
         {
+          "identifier": "apple_store_es",
+          "type": "file",
+          "description": "apple_store_es_description",
+          "label": "apple_store_es_label"
+        },
+        {
+          "identifier": "apple_store_fr",
+          "type": "file",
+          "description": "apple_store_fr_description",
+          "label": "apple_store_fr_label"
+        },
+        {
+          "identifier": "apple_store_it",
+          "type": "file",
+          "description": "apple_store_it_description",
+          "label": "apple_store_it_label"
+        },
+        {
+          "identifier": "apple_store_pl",
+          "type": "file",
+          "description": "apple_store_pl_description",
+          "label": "apple_store_pl_label"
+        },
+        {
+          "identifier": "apple_store_zh_cn",
+          "type": "file",
+          "description": "apple_store_zh_cn_description",
+          "label": "apple_store_zh_cn_label"
+        },
+        {
+          "identifier": "apple_store_zh_tw",
+          "type": "file",
+          "description": "apple_store_zh_tw_description",
+          "label": "apple_store_zh_tw_label"
+        },
+        {
           "identifier": "google_play",
           "type": "file",
           "description": "google_play_description",
           "label": "google_play_label"
+        },
+        {
+          "identifier": "google_play_es",
+          "type": "file",
+          "description": "google_play_es_description",
+          "label": "google_play_es_label"
+        },
+        {
+          "identifier": "google_play_fr",
+          "type": "file",
+          "description": "google_play_fr_description",
+          "label": "google_play_fr_label"
+        },
+        {
+          "identifier": "google_play_it",
+          "type": "file",
+          "description": "google_play_it_description",
+          "label": "google_play_it_label"
+        },
+        {
+          "identifier": "google_play_pl",
+          "type": "file",
+          "description": "google_play_pl_description",
+          "label": "google_play_pl_label"
+        },
+        {
+          "identifier": "google_play_zh_cn",
+          "type": "file",
+          "description": "google_play_zh_cn_description",
+          "label": "google_play_zh_cn_label"
+        },
+        {
+          "identifier": "google_play_zh_tw",
+          "type": "file",
+          "description": "google_play_zh_tw_description",
+          "label": "google_play_zh_tw_label"
         }
       ]
     },
