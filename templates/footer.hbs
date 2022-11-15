@@ -70,24 +70,11 @@
                     <div class="footer-title brand-text-color-inverted footer-contact" data-translation-key="footer_title_contact"></div>
                     <a href="mailto:info@yield.app">info@yield.app</a>
                     <div class="footer-language-selector">
-                      {{#if alternative_locales}}
-                        <div class="dropdown language-selector">
-                          <button class="dropdown-toggle" aria-haspopup="true">
-                            {{current_locale.name}}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
-                              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-                            </svg>
-                          </button>
-                          <span class="dropdown-menu dropdown-menu-end" role="menu">
-                            {{#each alternative_locales}}
-                              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-                                {{name}}
-                              </a>
-                            {{/each}}
-                          </span>
-                        </div>
-                      {{/if}}
-                    </div>
+                      <div class="dropdown language-selector async-language-selector locale-before-background-inverted arrow-black-after-background" data-name-locale="{{current_locale.name}}">
+                        <button class="dropdown-toggle" aria-haspopup="true"></button>
+                        <span class="dropdown-menu dropdown-menu-end" role="menu"></span>
+                      </div>
+                   </div>
                 </div>
             </div>
             <div class="footer-desktop-all-rights desktop-item">

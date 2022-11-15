@@ -92,6 +92,10 @@
     padding-top: 32px;
 }
 
+.footer-language-selector {
+    margin-left: 24px;
+}
+
 .footer-language-selector button {
     display: inline-block;
     font-weight: 400;

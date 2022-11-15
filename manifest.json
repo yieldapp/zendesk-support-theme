@@ -403,6 +403,30 @@
           "type": "file",
           "description": "404_error_image_description",
           "label": "404_error_image_label"
+        },
+        {
+          "identifier": "locale_image",
+          "type": "file",
+          "description": "locale_image_description",
+          "label": "locale_image_label"
+        },
+        {
+          "identifier": "locale_image_inverted",
+          "type": "file",
+          "description": "locale_image_inverted_description",
+          "label": "locale_image_inverted_label"
+        },
+        {
+          "identifier": "arrow_up_white",
+          "type": "file",
+          "description": "arrow_up_white_description",
+          "label": "arrow_up_white_label"
+        },
+        {
+          "identifier": "arrow_up_black",
+          "type": "file",
+          "description": "arrow_up_black_description",
+          "label": "arrow_up_black_label"
         }
       ]
     },

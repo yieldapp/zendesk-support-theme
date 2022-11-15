@@ -1,12 +1,3 @@
-const getFormattedLocale = (locale) => {
-    switch (locale) {
-        case "en-us": return "en"
-        case "zh-cn": return "cn"
-        case "zh-tw": return "tw"
-        default: return locale
-    }
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
     const locale = getCurrentLocale();
 

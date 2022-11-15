@@ -4552,3 +4552,18 @@ html[dir="rtl"] .notification-left-aligned {
   background-image: url($arrow_up_image);
 }
 
+.locale-before-background:before {
+  background-image: url($locale_image);
+}
+
+.locale-before-background-inverted:before {
+  background-image: url($locale_image_inverted);
+}
+
+.arrow-white-after-background:after {
+  background-image: url($arrow_up_white);
+}
+
+.arrow-black-after-background:after {
+  background-image: url($arrow_up_black);
+}
