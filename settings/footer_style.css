@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 280px;
 }
 
 .footer-content {
@@ -24,7 +25,7 @@
 .footer .footer-top-left {
     display: flex;
     flex-direction: column;
-    padding-right: 64px;
+    margin-right: 64px;
 }
 
 .footer .footer-top-right {
@@ -158,6 +159,15 @@
 
     .footer .footer-contact {
         padding-top: 32px;
+    }
+
+    .footer .footer-bottom {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .footer-bottom-right {
+        margin-top: 12px;
     }
 }
 

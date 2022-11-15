@@ -6,6 +6,7 @@
 /***** Header *****/
 .header {
     position: relative;
+    min-width: 280px;
 }
 
 .header .header-container {

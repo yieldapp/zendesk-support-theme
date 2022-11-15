@@ -1,3 +1,7 @@
+main {
+    min-width: 280px;
+}
+
 .hero-with-search {
     background-position: center top;
     background-size: cover;
