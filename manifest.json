@@ -1,7 +1,7 @@
 {
   "name": "YIELD",
   "author": "Zendesk",
-  "version": "2.5.8",
+  "version": "2.5.9",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
