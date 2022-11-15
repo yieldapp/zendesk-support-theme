@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     document.querySelectorAll("a[data-location-href]").forEach(element => {
         const key = element.getAttribute("data-location-href");
+        const isSimple = element.getAttribute("data-location-simple");
         const href = element.getAttribute("href");
-        const formattedLocale = getFormattedLocale(locale);
-        const currentLocale = formattedLocale === "en" ? null : formattedLocale;
+        const formattedLocale = isSimple ? getFormattedLocale(locale) : locale;
+        const currentLocale = formattedLocale.slice(0, 2) === "en" ? null : formattedLocale;
         if (href) {
             const newHref = href.split('/')
                 .map(str => str === key ? currentLocale : str)
