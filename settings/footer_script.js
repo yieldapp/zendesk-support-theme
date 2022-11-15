@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.querySelectorAll("a[data-location-href]").forEach(element => {
         const key = element.getAttribute("data-location-href");
         const href = element.getAttribute("href");
-        const currentLocale = locale === "en-us" ? "en" : locale;
-        if (href && currentLocale) {
-            const newHref = href.split('/').map(str => str === key ? currentLocale : str).join('/');
+        const currentLocale = locale === "en-us" ? null : locale;
+        if (href) {
+            const newHref = href.split('/')
+                .map(str => str === key ? currentLocale : str)
+                .filter(item => item !== null)
+                .join('/');
             element.setAttribute("href", newHref);
         }
     })
