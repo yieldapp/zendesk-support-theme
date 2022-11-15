@@ -66,6 +66,14 @@
     content: "❯"
 }
 
+.desktop-item {
+    display: flex;
+}
+
+.mobile-item {
+    display: none;
+}
+
 @media (max-width: 767px) {
     .hero-inner input[type="search"] {
         font-size: 14px;
@@ -86,4 +94,13 @@
         font-size: 12px;
         line-height: 16px;
     }
+
+    .desktop-item {
+        display: none;
+    }
+
+    .mobile-item {
+        display: flex;
+    }
+
 }

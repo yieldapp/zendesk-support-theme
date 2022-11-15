@@ -28,6 +28,17 @@
 }
 
 .footer .footer-top-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer-desktop-all-rights {
+    margin-top: 64px;
+    width: 100%;
+    justify-content: end;
+}
+
+.footer .footer-sections {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 32px;
@@ -40,7 +51,7 @@
     padding-top: 6px;
 }
 
-.footer .footer-top-right a {
+.footer .footer-sections a {
     color: black;
     font-weight: 400;
     font-size: 16px;
@@ -57,9 +68,13 @@
 }
 
 .footer .footer-stores {
-    margin-top: 64px;
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
+}
+
+.footer .trustpilot-wrapper.desktop-item {
+    margin-top: 32px;
 }
 
 .footer .footer-stores img {
@@ -96,7 +111,7 @@
 }
 
 @media (max-width: 991px) {
-    .footer .footer-top-right {
+    .footer .footer-sections {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -111,7 +126,7 @@
         align-items: start;
     }
 
-    .footer .footer-top-right {
+    .footer .footer-sections {
         padding-top: 32px;
         align-items: start;
     }

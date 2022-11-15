@@ -27,5 +27,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     })
 
+    // <!-- TrustBox script -->
+    const widgetWrapper = document.querySelectorAll(".trustpilot-wrapper");
+    widgetWrapper.forEach(node => {
+        node.innerHTML = `
+            <div
+                class="trustpilot-widget"
+                data-locale="${locale}"
+                data-template-id="53aa8807dec7e10d38f59f32"
+                data-businessunit-id="613fa057350776001de32082"
+                data-style-height="120px"
+                data-style-width="200px"
+                data-theme="light"
+            >
+                <a href="https://www.trustpilot.com/review/yield.app" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
+        `
+    });
+
+    const script = document.createElement("script");
+    script.setAttribute("src", "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js");
+    script.setAttribute("async", "");
+    script.setAttribute("type", "text/javascript");
+    document.querySelector("head").appendChild(script)
+    // <!-- End TrustBox script -->
+
     document.querySelectorAll(`.locale_${locale}`).forEach(node => node.style.display = "block")
 });
