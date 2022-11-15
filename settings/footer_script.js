@@ -1,10 +1,20 @@
+const getFormattedLocale = (locale) => {
+    switch (locale) {
+        case "en-us": return "en"
+        case "zh-cn": return "cn"
+        case "zh-tw": return "tw"
+        default: return locale
+    }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     const locale = getCurrentLocale();
 
     document.querySelectorAll("a[data-location-href]").forEach(element => {
         const key = element.getAttribute("data-location-href");
         const href = element.getAttribute("href");
-        const currentLocale = locale === "en-us" ? null : locale;
+        const formattedLocale = getFormattedLocale(locale);
+        const currentLocale = formattedLocale === "en" ? null : formattedLocale;
         if (href) {
             const newHref = href.split('/')
                 .map(str => str === key ? currentLocale : str)
