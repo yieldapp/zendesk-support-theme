@@ -126,6 +126,10 @@ main {
         left: 10px;
     }
 
+    .page-breadcrumbs {
+        padding-bottom: 52px;
+    }
+
     .page-breadcrumbs a,
     .page-breadcrumbs li {
         font-size: 12px;
