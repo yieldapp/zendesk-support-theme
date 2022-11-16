@@ -65,9 +65,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                         locale.toLowerCase() :
                         part.toLowerCase())
                     .join('/');
+                const formattedName = name.split(' (')[0];
                 const decodedUrl = encodeURIComponent(`${formattedPathname}${location.search}`);
                 const url = `/hc/change_language/${locale.toLowerCase()}?return_to=${decodedUrl}`
-                return html + `<a href="${url}" dir="${rtl ? "rtl" : "ltr"}" rel="nofollow" role="menuitem">${name}</a>`
+                return html + `<a href="${url}" dir="${rtl ? "rtl" : "ltr"}" rel="nofollow" role="menuitem">${formattedName}</a>`
             }, "")
     })
 });
