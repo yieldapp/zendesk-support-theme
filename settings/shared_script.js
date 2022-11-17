@@ -29,6 +29,8 @@ window.getFormattedLocale = (locale) => {
     }
 }
 
+window.isSighedUser = () => HelpCenter?.user?.role !== 'anonymous'
+
 const getLocales = async () => await Promise.all([
     fetch('/api/v2/locales/public'),
     fetch('/api/v2/help_center/locales'),

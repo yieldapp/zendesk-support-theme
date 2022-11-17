@@ -5,3 +5,185 @@
     display: flex;
     flex-direction: column;
 }
+
+.search_page .sidenav-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    margin: 0;
+}
+
+.search_page .multibrand-filter-list {
+    margin-top: 32px;
+}
+
+.search_page .sidenav-item {
+    border-radius: 10px;
+    padding: 16px 32px;
+}
+
+.search_page .sidenav-item.current {
+    border: 1px solid #1F63FF;
+    background-color: transparent;
+}
+
+.search_page .sidenav-item:hover {
+    background-color: transparent;
+
+}
+
+.search_page .sidenav-item .filter-name,
+.search_page .sidenav-item .doc-count {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    border-radius: 0;
+    color: #000;
+}
+
+.search_page .sidenav-item.current .filter-name,
+.search_page .sidenav-item.current .doc-count {
+    color: #1F63FF;
+}
+
+.search_page .search-results {
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-gap: 112px;
+}
+
+.search_page .search-results-sidebar,
+.search_page .search-results-column {
+    flex: none;
+}
+
+.search_page .search-results-sidebar {
+    margin: 0;
+    border: none;
+}
+
+.search_page .filters-in-section {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+.search_page .search-results-subheading {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 8px;
+}
+
+.search_page .search-results-list > li:first-child {
+    border-color: #A6A6A6;
+}
+
+.search_page .search-results-list > li {
+    padding: 42px 0 0;
+}
+
+.search_page .search-result-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.search_page .meta-group {
+    padding-top: 10px;
+}
+
+.search_page .search-results-description {
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.search_page .meta-group a,
+.search_page .meta-group li,
+.search_page .meta-group time,
+.search_page .meta-group a:visited {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #A6A6A6 !important;
+}
+
+.pagination-next a,
+.pagination-last a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 12px 40px;
+    margin: 0 16px;
+    width: fit-content;
+}
+
+@media (max-width: 991px) {
+    .search_page .search-results {
+        grid-gap: 64px;
+    }
+
+    .search_page .sidenav-item {
+        padding: 10px 12px;
+    }
+
+    .search_page .sidenav-item .filter-name,
+    .search_page .sidenav-item .doc-count {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .search_page .search-results {
+        grid-template-columns: 1fr;
+    }
+
+    .pagination-next a,
+    .pagination-last a{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        padding: 12px 40px;
+    }
+
+    .search_page .search-results-list > li {
+        padding: 24px 0 0;
+    }
+
+    .search_page .search-results-list > li:first-child {
+        padding-top: 56px;
+    }
+
+    .search_page .search-result-title{
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+    .search_page .meta-group a,
+    .search_page .meta-group li,
+    .search_page .meta-group time,
+    .search_page .meta-group a:visited {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .search_page .meta-group {
+        padding-top: 8px;
+    }
+
+    .search_page .search-results-description {
+        padding-top: 16px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .pagination-next a,
+    .pagination-last a {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 8px 24px;
+    }
+}

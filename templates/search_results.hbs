@@ -72,22 +72,14 @@
         </section>
       {{/if}}
       {{#if subfilters}}
-        <section class="filters-in-section collapsible-sidebar" aria-expanded="false">
-          <button type="button" class="collapsible-sidebar-toggle" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon chevron-icon">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 12 12" aria-hidden="true" class="collapsible-sidebar-toggle-icon x-icon">
-              <path stroke="currentColor" stroke-linecap="round" d="M3 9l6-6m0 6L3 3"/>
-            </svg>
-          </button>
+        <section class="filters-in-section" aria-expanded="false">
           {{#is current_filter.identifier 'knowledge_base'}}
-            <h3 class="collapsible-sidebar-title sidenav-title">{{t 'filter_by_category'}}</h3>
+            <h3 class="sidenav-title brand-text-color-inverted">{{t 'filter_by_category'}}</h3>
           {{/is}}
           {{#is current_filter.identifier 'community'}}
-            <h3 class="collapsible-sidebar-title sidenav-title">{{t 'filter_by_topic'}}</h3>
+            <h3 class="sidenav-title brand-text-color-inverted">{{t 'filter_by_topic'}}</h3>
           {{/is}}
-          <ul class="multibrand-filter-list multibrand-filter-list--collapsed">
+          <ul class="multibrand-filter-list">
             {{#each subfilters}}
               <li>
                 {{#if selected}}
@@ -127,7 +119,7 @@
         <ul class="search-results-list">
           {{#each results}}
             <li class="search-result-list-item result-{{type}}">
-              <h2 class="search-result-title">
+              <h2 class="search-result-title brand-text-color-inverted">
                 <a href="{{url}}" class="results-list-item-link">{{title}}</a>
               </h2>
               <div class="search-result-icons">

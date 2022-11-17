@@ -115,6 +115,10 @@
     border-radius: 10px;
 }
 
+.article-votes.hidden {
+    display: none;
+}
+
 .article-votes-controls {
     margin-top: 40px;
     display: flex;
