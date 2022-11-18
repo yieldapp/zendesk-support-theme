@@ -41,6 +41,8 @@ const translations = {
         "footer_link_terms_and_conditions": "Terms and conditions",
         "footer_title_contact": "Contact",
         "footer_all_right": "All right reserved",
+        "downvote_sorry_title": "We're sorry to hear that.",
+        "downvote_tell_us": "Please tell us why.",
     },
     "es": {
         "footer_title_company": "Compañía",
