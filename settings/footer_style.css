@@ -103,6 +103,10 @@
     line-height: 32px;
 }
 
+.footer-language-selector .dropdown-menu {
+    bottom: 24px;
+}
+
 .footer .footer-all-rights {
     font-weight: 400;
     font-size: 16px;

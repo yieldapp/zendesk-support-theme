@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     wrapperElementList.forEach(wrapperElement => {
         const name = wrapperElement.getAttribute("data-name-locale");
-        wrapperElement.querySelector('.dropdown-toggle').textContent =
+        wrapperElement.querySelector('.dropdown-clickable').textContent =
             name
                 ? name.split(' (')[0]
                 : formattedLanguage;
@@ -73,4 +73,33 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return html + `<a href="${url}" dir="${rtl ? "rtl" : "ltr"}" rel="nofollow" role="menuitem">${formattedName}</a>`
             }, "")
     })
+
+    /* DROPDOWN */
+    const CLICKABLE_DROPDOWN_KEY = 'data-clickable-dropdown'
+    const CLICKABLE_DROPDOWN_OPEN_CLASS = 'opened'
+    const dropdownElements = document.querySelectorAll(`[${CLICKABLE_DROPDOWN_KEY}]`)
+
+    dropdownElements.forEach(element => {
+        const isOpened = () => element.classList.contains(CLICKABLE_DROPDOWN_OPEN_CLASS)
+        const toggleAction = () => {
+            const id = element.getAttribute(CLICKABLE_DROPDOWN_KEY)
+            const list = document.querySelector(`#${id}`)
+            if (isOpened()) {
+                list.style.display = 'none'
+                element.classList.remove(CLICKABLE_DROPDOWN_OPEN_CLASS)
+            } else {
+                list.style.display = 'block'
+                element.classList.add(CLICKABLE_DROPDOWN_OPEN_CLASS)
+            }
+        }
+
+        element.addEventListener('click', toggleAction, false)
+        element.addEventListener('touch', toggleAction, false)
+        element.addEventListener('focusout', () => {
+            setTimeout(() => {if (isOpened()) {
+                toggleAction()
+            }}, 100)
+        })
+    })
 });
+
