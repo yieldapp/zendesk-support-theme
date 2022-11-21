@@ -1,3 +1,5 @@
+const MAIN_CATEGORY_ID = 10589460627857;
+
 const fetchSections = (locale) => {
     return fetch(`/api/v2/help_center/${locale}/sections`)
         .then(data => data.json())
@@ -58,6 +60,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const sectionsList = await fetchSections(locale);
     sectionsList.forEach(section => {
+        const isFromMainCategory = section.category_id === MAIN_CATEGORY_ID;
+        if (!isFromMainCategory) return;
         const sectionElement = createSectionElement(section);
         sectionsWrapperElement.append(sectionElement);
     })
