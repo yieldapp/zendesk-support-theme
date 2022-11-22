@@ -8,6 +8,8 @@ document.addEventListener("click", (event) => {
         }
         if (node.matches("[data-action=request]")) {
             location.href = `/hc/${currentLanguage}/requests/new`
+        } else if (node.matches("[data-action=open_faq]")) {
+            location.href = `/hc/${currentLanguage}/categories/360002989777-FAQ`
         } else {
             checkElement(node.parentNode)
         }
