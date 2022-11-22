@@ -527,6 +527,12 @@
           "type": "file",
           "description": "request_style_description",
           "label": "request_style_label"
+        },
+        {
+          "identifier": "category_style",
+          "type": "file",
+          "description": "category_style_description",
+          "label": "category_style_label"
         }
       ]
     },
