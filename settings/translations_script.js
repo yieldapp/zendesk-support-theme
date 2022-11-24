@@ -17,6 +17,8 @@ const translations = {
         "hero_description": "Yield App’s Customer Support is online 24/7 to help with your needs.",
         "section_faq_title": "FAQ",
         "section_faq_description": "Everything you need to know to use Yield App",
+        "section_get_started_title": "Get Started",
+        "section_get_started_description": "Get started on Yield App with our simple guide",
         "submit_a_request_description": "Contact our support experts for help",
         "footer_title_company": "Company",
         "footer_link_home": "Home",

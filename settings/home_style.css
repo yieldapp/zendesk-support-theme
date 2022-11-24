@@ -29,11 +29,11 @@
 
 .hero-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 82px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 81px;
     width: 100%;
-    margin-bottom: 200px;
-    margin-top: -180px;
+    max-width: 1240px;
+    margin: -180px auto 200px auto;
 }
 
 .hero-buttons .hero-buttons-item  {
@@ -75,7 +75,7 @@
 }
 
 .help-center-articles {
-    max-width: 1160px;
+    max-width: 1380px;
     margin: 0 auto;
     padding: 0 5%;
     align-items: center;
@@ -151,11 +151,11 @@
     border-bottom: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1240px) {
     .hero-buttons {
         margin-bottom: 150px;
         grid-gap: 32px;
-        margin-top: -180px;
+        margin-top: -120px;
     }
 
     .hero-buttons .hero-buttons-item,

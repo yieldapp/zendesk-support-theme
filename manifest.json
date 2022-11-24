@@ -1,7 +1,7 @@
 {
   "name": "YIELD",
   "author": "Zendesk",
-  "version": "2.5.17",
+  "version": "2.5.18",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -363,10 +363,15 @@
           "label": "community_image_label"
         },
         {
+          "identifier": "get_started_icon",
+          "type": "file",
+          "description": "get_started_icon_description",
+          "label": "get_started_icon_label"
+        },        {
           "identifier": "faq_icon",
           "type": "file",
           "description": "faq_icon_description",
-          "label": "faq_icon.svg_label"
+          "label": "faq_icon_label"
         },
         {
           "identifier": "support_icon",

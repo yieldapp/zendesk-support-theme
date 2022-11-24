@@ -10,18 +10,12 @@
 }
 
 .header .header-container {
-    max-width: 1160px;
+    max-width: 1380px;
     margin: 0 auto;
     padding: 52px 5% 32px;
     align-items: center;
     display: flex;
     justify-content: space-between;
-}
-
-@media (min-width: 1160px) {
-    .header .header-container {
-        width: 90%;
-    }
 }
 
 .header .dropdown-clickable {
@@ -77,7 +71,7 @@
     display: flex;
     width: 100%;
     justify-content: end;
-    max-width: 1160px;
+    max-width: 1380px;
     margin: 0 auto;
     padding: 0 5%;
 }
@@ -90,12 +84,6 @@
     padding: 0 5%;
     align-items: center;
     justify-content: center;
-}
-
-@media (min-width: 1160px) {
-    .header .user-info-block {
-        width: 90%;
-    }
 }
 
 @media (max-width: 767px) {
