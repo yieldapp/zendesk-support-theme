@@ -1330,12 +1330,6 @@ ul {
   flex: 1;
 }
 
-@media (min-width: 1024px) {
-  .category-content {
-    flex: 0 0 80%;
-  }
-}
-
 .section-tree {
   display: flex;
   flex-direction: column;
@@ -1351,13 +1345,6 @@ ul {
 
 .section-tree .section {
   flex: initial;
-}
-
-@media (min-width: 768px) {
-  .section-tree .section {
-    flex: 0 0 45%;
-    /* Two columns for tablet and desktop. Leaving 5% separation between columns */
-  }
 }
 
 .section-tree-title {

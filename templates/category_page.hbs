@@ -24,12 +24,10 @@
 
       <div id="main-content" class="section-tree">
         {{#each sections}}
-          <section class="section">
-            <h2 class="section-tree-title">
-              <a href="{{url}}">{{name}}</a>
-            </h2>
+          <section class="section collapsed-section">
+            <h2 class="section-tree-title collapsed-trigger arrow-bg">{{name}}</h2>
             {{#if articles}}
-              <ul class="article-list">
+              <ul class="article-list collapsed-list">
                 {{#each articles}}
                   <li class="article-list-item{{#if promoted}} article-promoted{{/if}}">
                     {{#if promoted}}
@@ -46,12 +44,14 @@
                     {{/if}}
                   </li>
                 {{/each}}
+                {{#if more_articles}}
+                  <li>
+                    <a href="{{url}}" class="see-all-articles">
+                      {{t 'show_all_articles' count=article_count}}
+                    </a>
+                  </li>
+                {{/if}}
               </ul>
-              {{#if more_articles}}
-                <a href="{{url}}" class="see-all-articles">
-                  {{t 'show_all_articles' count=article_count}}
-                </a>
-              {{/if}}
             {{/if}}
           </section>
         {{else}}
@@ -63,3 +63,5 @@
     </div>
   </div>
 </div>
+
+<script src="{{settings.category_script}}"></script>

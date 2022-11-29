@@ -1,7 +1,7 @@
 {
   "name": "YIELD",
   "author": "Zendesk",
-  "version": "2.5.18",
+  "version": "2.5.19",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -473,6 +473,12 @@
           "type": "file",
           "description": "article_script_description",
           "label": "article_script_label"
+        },
+        {
+          "identifier": "category_script",
+          "type": "file",
+          "description": "category_script_description",
+          "label": "category_script_label"
         }
       ]
     },

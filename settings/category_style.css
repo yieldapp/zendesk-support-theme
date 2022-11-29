@@ -18,6 +18,12 @@
     color: #1F63FF;
 }
 
+.category-page .article-list  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .category-page .article-list-item  {
     font-weight: 400;
     font-size: 24px;
@@ -25,9 +31,69 @@
 }
 
 .category-page .section-tree-title {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 24px;
     line-height: 31px;
+
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    cursor: pointer;
+    background-size: 30px;
+    padding-right: 42px;
+}
+
+.category-page .section {
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    flex-direction: column;
+}
+
+.category-page .section-tree-title.active {
+    color: #1F63FF;
+    font-weight: 700;
+}
+
+.category-page .section:hover,
+.category-page .section.active {
+    border-color: #1F63FF;
+}
+
+.category-page .section ::selection,
+.category-page .section ::-moz-selection {
+    background-color: transparent;
+}
+
+.collapsed-section:not(.active) .collapsed-list {
+    display: none;
+}
+
+.category-page .collapsed-list li {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000;
+    width: 100%;
+    border-bottom: 1px solid #EAEAEA;
+    padding-top: 32px;
+    padding-bottom: 12px;
+}
+
+.category-page .collapsed-list li:first-child {
+    padding-top: 64px;
+}
+
+.category-page .collapsed-list li:last-child {
+    border-bottom: none;
 }
 
 @media (max-width: 767px) {
@@ -41,5 +107,27 @@
     .category-page .section-tree-title {
         font-size: 14px;
         line-height: 18px;
+    }
+
+    .category-page .section {
+        padding: 12px 12px 12px 10px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .category-page .section-tree-title {
+        background-size: 12px;
+        padding-right: 12px;
+    }
+
+    .category-page .collapsed-list li:first-child {
+        padding-top: 18px;
+    }
+
+    .category-page .collapsed-list li {
+        font-size: 14px;
+        line-height: 18px;
+        padding-top: 18px;
+        padding-bottom: 6px;
     }
 }
