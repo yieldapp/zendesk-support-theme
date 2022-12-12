@@ -4502,6 +4502,10 @@ html[dir="rtl"] .notification-left-aligned {
   }
 }
 
+div:has(>[data-test-id="notification"]) {
+  max-width: calc(100% - 32px);
+}
+
 /*  */
 .brand-color {
   background-color: $brand_color_v2;
