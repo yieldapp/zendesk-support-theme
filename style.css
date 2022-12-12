@@ -4503,7 +4503,9 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 div:has(>[data-test-id="notification"]) {
-  max-width: calc(100% - 32px);
+  top: 0;
+  right: 0;
+  max-width: 100%;
 }
 
 /*  */
