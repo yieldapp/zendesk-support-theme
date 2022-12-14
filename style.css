@@ -4521,7 +4521,7 @@ html[dir="rtl"] .notification-left-aligned {
 
 [data-test-id="notification"]::after {
   content: "";
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 3px;
