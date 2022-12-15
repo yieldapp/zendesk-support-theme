@@ -4502,15 +4502,32 @@ html[dir="rtl"] .notification-left-aligned {
   }
 }
 
+@keyframes toastAnimation {
+  0% {
+    top: 0;
+    visibility: visible;
+  }
+  99% {
+    top: 0;
+    visibility: hidden;
+  }
+  100% {
+    top: -100px;
+    visibility: hidden;
+  }
+}
+
 [data-test-id="notification"] {
-  top: 0;
+  top: -100px;
   right: 0;
   position: fixed !important;
   width: 360px;
   max-width: 100%;
+  visibility: hidden;
+  animation: toastAnimation 5s linear;
 }
 
-@keyframes toastAnimation {
+@keyframes toastProgressAnimation {
   0% {
     width: 0;
   }
@@ -4528,7 +4545,7 @@ html[dir="rtl"] .notification-left-aligned {
   background: #038153;
   position: absolute;
   border-radius: 10%;
-  animation: toastAnimation 20s linear;
+  animation: toastProgressAnimation 5s linear;
 }
 
 /*  */
