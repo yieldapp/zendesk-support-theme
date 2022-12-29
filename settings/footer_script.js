@@ -1,18 +1,15 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const locale = getCurrentLocale();
 
-    document.querySelectorAll("a[data-location-href]").forEach(element => {
-        const key = element.getAttribute("data-location-href");
+    document.querySelectorAll("a[data-location-href=true]").forEach(element => {
         const isSimple = element.getAttribute("data-location-simple");
         const href = element.getAttribute("href");
         const formattedLocale = isSimple ? getFormattedLocale(locale) : locale;
         const currentLocale = formattedLocale.slice(0, 2) === "en" ? null : formattedLocale;
         if (href) {
-            const newHref = href.split('/')
-                .map(str => str === key ? currentLocale : str)
-                .filter(item => item !== null)
-                .join('/');
-            element.setAttribute("href", newHref);
+            const url = new URL(href)
+            const urlWithLang = `${url.origin}${currentLocale ? `/${currentLocale}` : ""}${url.pathname}`
+            element.setAttribute("href", urlWithLang);
         }
     })
 
