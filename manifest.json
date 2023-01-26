@@ -6,23 +6,6 @@
   "default_locale": "en-us",
   "settings": [
     {
-      "label": "font_group_label",
-      "variables": [
-        {
-          "identifier": "suisse_intl_regular",
-          "type": "file",
-          "description": "suisse_intl_regular_description",
-          "label": "suisse_intl_regular_label"
-        },
-        {
-          "identifier": "suisse_intl_semi_bold",
-          "type": "file",
-          "description": "suisse_intl_semi_bold_description",
-          "label": "suisse_intl_semi_bold_label"
-        }
-      ]
-    },
-    {
       "label": "colors_group_label",
       "variables": [
         {
