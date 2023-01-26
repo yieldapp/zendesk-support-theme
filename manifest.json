@@ -432,6 +432,12 @@
           "type": "file",
           "description": "arrow_up_black_description",
           "label": "arrow_up_black_label"
+        },
+        {
+          "identifier": "yield_app_logo",
+          "type": "file",
+          "description": "yield_app_logo_description",
+          "label": "yield_app_logo_label"
         }
       ]
     },

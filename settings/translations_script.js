@@ -45,6 +45,11 @@ const translations = {
         "downvote_sorry_title": "We're sorry to hear that.",
         "downvote_tell_us": "Please tell us why.",
         "footer_link_labs": "Yield App Labs",
+        "footer_title_products": "Products",
+        "footer_link_exchange": "Exchange",
+        "footer_link_yield_labs": "Yield App Labs",
+        "footer_link_haven1": "Haven1",
+        "footer_link_swap": "Swap",
     },
     "es": {
         "hero_title": "Centro de ayuda Yield App",
