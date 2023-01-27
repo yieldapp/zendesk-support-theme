@@ -4,6 +4,9 @@ Zendesk theme of support.yield.app
 ### Setting up the GitHub integration with your Guide theme
 https://support.zendesk.com/hc/en-us/articles/4408832476698-Setting-up-the-GitHub-integration-with-your-Guide-theme
 
+#### IMPORTANT!
+To be able to update zendesk theme from Github dont forget to increase theme version in _manifest.json_ file.
+
 ### Guide of set up thee on local env
 https://support.zendesk.com/hc/en-us/articles/4408822095642
 
