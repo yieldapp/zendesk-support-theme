@@ -33,10 +33,15 @@ const translations = {
         "downvote_tell_us": "Please tell us why.",
         "footer_link_labs": "Yield App Labs",
         "footer_title_products": "Products",
+        "footer_link_earn": "Earn",
         "footer_link_exchange": "Exchange",
-        "footer_link_yield_labs": "Yield App Labs",
         "footer_link_haven1": "Haven1",
-        "footer_link_swap": "Swap",
+        "footer_link_products": "Structured products",
+        "footer_link_yield_labs": "Yield App Labs",
+        "footer_title_company": "Company",
+        "footer_link_about": "About us",
+        "footer_link_security": "Asset security",
+        "footer_link_blog": "Blog",
     },
     "es": {
         "hero_title": "Centro de ayuda Yield App",
@@ -56,6 +61,9 @@ const translations = {
         "footer_title_contact": "Contacto",
         "footer_all_right": "Todos los derechos reservados",
         "footer_link_labs": "Yield App Labs",
+        "footer_title_company": "Compañía",
+        "footer_link_about": "Acerca de nosotros",
+        "footer_link_blog": "Blog",
     },
     "it": {
         "hero_title": "Centro assistenza Yield App",
@@ -75,6 +83,9 @@ const translations = {
         "footer_title_contact": "Contatti",
         "footer_all_right": "Tutti i diritti riservati",
         "footer_link_labs": "Yield App Labs",
+        "footer_title_company": "Azienda",
+        "footer_link_about": "Su di noi",
+        "footer_link_blog": "Blog",
     },
     "fr": {
         "hero_title": "Centre d'assistance Yield App",
@@ -94,6 +105,9 @@ const translations = {
         "footer_title_contact": "Contact",
         "footer_all_right": "Tous droits réservés",
         "footer_link_labs": "Yield App Labs",
+        "footer_title_company": "Entreprise",
+        "footer_link_about": "À propos",
+        "footer_link_blog": "Blog",
     },
     "id": {
         "hero_title": "Pusat Bantuan Yield App",
@@ -113,6 +127,9 @@ const translations = {
         "footer_title_contact": "Kontak",
         "footer_all_right": "All rights reserved",
         "footer_link_labs": "Yield App Labs",
+        "footer_title_company": "Perusahaan",
+        "footer_link_about": "Tentang Kami",
+        "footer_link_blog": "Blog",
     },
     "pl": {
         "hero_title": "Centrum pomocy Yield App",
@@ -132,6 +149,9 @@ const translations = {
         "footer_title_contact": "Kontakt",
         "footer_all_right": "Wszystkie prawa zastrzeżone",
         "footer_link_labs": "Yield App Labs",
+        "footer_title_company": "Firma",
+        "footer_link_about": "O nas",
+        "footer_link_blog": "Blog",
     },
     "zh-cn": {
         "hero_title": "Yield App 客服中心",
@@ -151,6 +171,9 @@ const translations = {
         "footer_title_contact": "联系我们",
         "footer_all_right": "版权所有",
         "footer_link_labs": "Yield App Labs",
+        "footer_title_company": "公司",
+        "footer_link_about": "关于我们",
+        "footer_link_blog": "博客",
     },
     "zh-tw": {
         "hero_title": "Yield App 客服中心",
@@ -170,5 +193,8 @@ const translations = {
         "footer_title_contact": "聯絡我們",
         "footer_all_right": "版權所有",
         "footer_link_labs": "Yield App Labs",
+        "footer_title_company": "公司",
+        "footer_link_about": "關於我們",
+        "footer_link_blog": "博客",
     }
 };
