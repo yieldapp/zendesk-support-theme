@@ -113,6 +113,13 @@
     line-height: 21px;
 }
 
+.footer .footer-follow-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0 20px;
+    padding-top: 20px;
+}
+
 @media (min-width: 1160px) {
     .footer-inner {
         padding: 0;
@@ -176,6 +183,15 @@
 
     .footer-bottom-right {
         margin-top: 12px;
+    }
+
+    .footer .footer-follow-icons {
+        padding-top: 12px;
+        grid-gap: 12px;
+    }
+
+    .footer .footer-follow-icons img {
+        width: 32px;
     }
 }
 
