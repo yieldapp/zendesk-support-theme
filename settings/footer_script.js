@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const isSimple = element.getAttribute("data-location-simple");
         const href = element.getAttribute("href");
         const formattedLocale = isSimple ? getFormattedLocale(locale) : locale;
-        const currentLocale = formattedLocale.slice(0, 2) === "en" ? null : formattedLocale;
+        // TODO: temporary disable link translation
+        // const currentLocale = formattedLocale.slice(0, 2) === "en" ? null : formattedLocale;
+        const currentLocale = null;
         if (href) {
             const url = new URL(href)
             const urlWithLang = `${url.origin}${currentLocale ? `/${currentLocale}` : ""}${url.pathname}`
