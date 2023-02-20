@@ -23,8 +23,8 @@
 
 .articles-list a {
     font-weight: 400;
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 16px;
+    line-height: 21px;
     padding: 42px 28px;
     border: 1px solid #EAEAEA;
     border-radius: 10px;
@@ -43,8 +43,8 @@
 
 .article-container {
     display: grid;
-    grid-template-columns: 40% auto;
-    grid-gap: 112px;
+    grid-template-columns: 33% auto;
+    grid-gap: 32px;
 }
 
 .article-header {
@@ -103,8 +103,8 @@
     margin: 64px 0;
     word-wrap: break-word;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 .article-votes {
