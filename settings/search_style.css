@@ -35,8 +35,8 @@
 .search_page .sidenav-item .filter-name,
 .search_page .sidenav-item .doc-count {
     font-weight: 400;
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 16px;
+    line-height: 21px;
     border-radius: 0;
     color: #000;
 }
@@ -48,7 +48,7 @@
 
 .search_page .search-results {
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 33% auto;
     grid-gap: 112px;
 }
 
@@ -96,8 +96,8 @@
 .search_page .search-results-description {
     padding-top: 20px;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 .search_page .meta-group a,
