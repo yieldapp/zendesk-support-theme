@@ -1,4 +1,6 @@
 const MAIN_CATEGORY_ID = 10589460627857;
+const SEARCH_MODE = "categories" // "sections" | "categories"
+const PAGE_SIZE = 100;
 
 const fetchSections = (locale) => {
     return fetch(`/api/v2/help_center/${locale}/sections`)
@@ -6,8 +8,20 @@ const fetchSections = (locale) => {
         .then(formattedData => formattedData.sections);
 }
 
-const fetchArticles = (section, locale) => {
-    return fetch(`/api/v2/help_center/${locale}/sections/${section.id}/articles`)
+const fetchArticlesBySection = (section, locale) => {
+    return fetch(`/api/v2/help_center/${locale}/sections/${section.id}/articlespage[size]=${PAGE_SIZE}`)
+        .then(a => a.json())
+        .then(formattedData => formattedData.articles);
+}
+
+const fetchCategories = (locale) => {
+    return fetch(`/api/v2/help_center/${locale}/categories`)
+        .then(a => a.json())
+        .then(formattedData => formattedData.categories);
+}
+
+const fetchArticlesByCategory = (category, locale) => {
+    return fetch(`/api/v2/help_center/${locale}/categories/${category.id}/articles?page[size]=${PAGE_SIZE}`)
         .then(a => a.json())
         .then(formattedData => formattedData.articles);
 }
@@ -24,7 +38,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         return articleElement;
     }
 
-    const createSectionElement = (section) => {
+    const createAccordionElement = (item) => {
         let isActive = false;
         let isLoaded = false;
         const sectionElement = document.createElement("div");
@@ -36,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         sectionArrowElement.classList.add("help-center-section-arrow");
         sectionArticlesElement.classList.add("help-center-section-articles");
 
-        sectionNameElement.textContent = section.name;
+        sectionNameElement.textContent = item.name;
 
         sectionElement.append(sectionNameElement, sectionArticlesElement);
 
@@ -47,7 +61,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (isLoaded) {
                 return;
             }
-            const articles = await fetchArticles(section, locale);
+            const fetchArticles = SEARCH_MODE === "sections" ? fetchArticlesBySection : fetchArticlesByCategory;
+            const articles = await fetchArticles(item, locale);
             const articlesElements = articles.map(article => crateArticleElement(article))
             sectionArticlesElement.append(...articlesElements);
             isLoaded = true;
@@ -58,11 +73,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         return sectionElement;
     }
 
-    const sectionsList = await fetchSections(locale);
-    sectionsList.forEach(section => {
-        const isFromMainCategory = section.category_id === MAIN_CATEGORY_ID;
-        if (!isFromMainCategory) return;
-        const sectionElement = createSectionElement(section);
-        sectionsWrapperElement.append(sectionElement);
-    })
+    if (SEARCH_MODE === "sections") {
+        const sectionsList = await fetchSections(locale);
+        sectionsList.forEach(section => {
+            const isFromMainCategory = section.category_id === MAIN_CATEGORY_ID;
+            if (!isFromMainCategory) return;
+            const sectionElement = createAccordionElement(section);
+            sectionsWrapperElement.append(sectionElement);
+        })
+    } else {
+        const categoryList = await fetchCategories(locale);
+        console.log(categoryList);
+        categoryList.forEach(article => {
+            const sectionElement = createAccordionElement(article);
+            sectionsWrapperElement.append(sectionElement);
+        })
+    }
 });
