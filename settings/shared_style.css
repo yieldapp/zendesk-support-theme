@@ -23,7 +23,7 @@ main {
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
-    padding: 20px 20px 16px 60px;
+    padding: 20px 40px 16px 60px;
     color: #104499;
     border-radius: 100px;
     height: 68px;
@@ -42,6 +42,24 @@ main {
     position: absolute;
     top: 27px;
     left: 24px;
+}
+
+.hero-inner-discard-search {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 24px;
+    color: #104499;
+    cursor: pointer;
+}
+
+.hero-inner-discard-search.visible {
+    display: block;
+}
+
+.hero-inner-discard-search:hover {
+    font-weight: bold;
 }
 
 .page-breadcrumbs {
@@ -139,9 +157,15 @@ main {
     .hero-inner input[type="search"] {
         font-size: 14px;
         line-height: 32px;
-        padding: 12px 12px 12px 30px;
+        padding: 12px 30px 12px 30px;
         border-radius: 100px;
         height: 39px;
+    }
+
+    .hero-inner-discard-search {
+        right: 10px;
+        top: 8px;
+        font-size: 16px;
     }
 
     .hero-inner .search-icon {
