@@ -47,7 +47,7 @@ main {
 .hero-inner-discard-search {
     display: none;
     position: absolute;
-    right: 16px;
+    right: 20px;
     top: 16px;
     font-size: 24px;
     color: #104499;
@@ -163,8 +163,8 @@ main {
     }
 
     .hero-inner-discard-search {
-        right: 10px;
-        top: 8px;
+        right: 16px;
+        top: 7px;
         font-size: 16px;
     }
 
@@ -192,4 +192,12 @@ main {
         display: flex;
     }
 
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }
