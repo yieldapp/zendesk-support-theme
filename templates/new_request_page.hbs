@@ -26,3 +26,14 @@
     {{request_form wysiwyg=true}}
   </div>
 </div>
+<div class="new_request_search_template" style="display: none;">
+    <select
+        name="request[subject]"
+        id="request_subject"
+        aria-required="true"
+        aria-labelledby="request_subject_label">
+        <option value="Generic request" data-translation-key="new_request_option_generic"></option>
+        <option value="Fiat payments request" data-translation-key="new_request_option_payments"></option>
+    </select>
+</div>
+<script src="{{settings.request_script}}"></script>

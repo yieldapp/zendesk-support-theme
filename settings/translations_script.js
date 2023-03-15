@@ -42,6 +42,8 @@ const translations = {
         "footer_link_about": "About us",
         "footer_link_security": "Asset security",
         "footer_link_blog": "Blog",
+        "new_request_option_generic": "Generic request",
+        "new_request_option_payments": "Fiat payments request",
     },
     "es": {
         "hero_title": "Centro de ayuda Yield App",
