@@ -94,6 +94,10 @@
     background-color: #104499;
 }
 
+select#request_type {
+    margin-bottom: 32px;
+}
+
 @media (max-width: 767px) {
     .request_page h1 {
         font-size: 24px;
