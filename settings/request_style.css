@@ -17,8 +17,7 @@
     line-height: 31px;
 }
 
-.request_page .form-field label,
-.request_type_wrapper label {
+.request_page .form-field label {
     font-weight: 400;
     font-size: 24px;
     line-height: 31px;
@@ -30,7 +29,7 @@
 .request_page .form-field.string.optional input,
 .request_page .request_subject input,
 .request_page .request_subject select,
-.request_type_wrapper select {
+.request_page .form-field a {
     font-size: 24px;
     line-height: 31px;
     padding: 16px 8px;
@@ -38,8 +37,13 @@
     border-radius: 0;
 }
 
-.request_type_wrapper select {
-    color: #000;
+.nesty-panel li {
+    font-size: 24px;
+    line-height: 31px;
+}
+
+.request_page .form-field a {
+    height: 65px;
 }
 
 .request_page .form-field [role="application"],
@@ -97,17 +101,12 @@
     background-color: #104499;
 }
 
-.request_type_wrapper {
-    margin: 32px 0;
-}
-
 @media (max-width: 767px) {
     .request_page h1 {
         font-size: 24px;
         line-height: 31px;
     }
 
-    .request_type_wrapper label,
     .request_page .form-field label {
         font-size: 14px;
         line-height: 24px;
