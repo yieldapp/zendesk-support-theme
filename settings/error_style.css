@@ -1,5 +1,6 @@
 .error-page {
     overflow: hidden;
+    min-height: 260px;
 }
 
 .error-container {
@@ -74,6 +75,10 @@
     font-size: 16px;
     line-height: 21px;
     text-decoration: none;
+}
+
+.error-page.hidden {
+    display: none;
 }
 
 @media (max-width: 768px) {

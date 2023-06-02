@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="{{settings.error_style}}">
 
 <div class="container-divider"></div>
-<div id="main-content" class="error-page">
+<div id="main-content" class="error-page hidden" data-error="{{ error }}">
     {{#is error 'not_found'}}
         <div class="error-container">
             <div class="error-container-image">
@@ -40,3 +40,5 @@
       {{/link}}
     {{/is}}
 </div>
+
+<script src="{{settings.error_script}}"></script>

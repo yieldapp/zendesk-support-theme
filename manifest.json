@@ -498,6 +498,12 @@
           "type": "file",
           "description": "category_script_description",
           "label": "category_script_label"
+        },
+        {
+          "identifier": "error_script",
+          "type": "file",
+          "description": "error_script_description",
+          "label": "error_script_label"
         }
       ]
     },
